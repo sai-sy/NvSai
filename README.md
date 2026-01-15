@@ -16,4 +16,4 @@
 - [ ] open pdfs
 - [ ] I abandoned this because NvChad's cheatsheet was so nice but I can't get diagnostics on their custom nvui plugin tabufline so I'll do it on this and use https://github.com/sudormrfbin/cheatsheet.nvim
 - [ ] the gitignore and not gitignore toggle for fuzzy find and grep
-
+- [ ] jump to last spot and forward spot with alt arrow

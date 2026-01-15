@@ -9,5 +9,10 @@ return {
     require("bufferline").setup({
       options = { diagnostics = "nvim_lsp" }
     })
+    vim.keymap.set('n', '<tab>', ':BufferLineCycleNext<CR>', {})
+    vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', {})
   end
  }
+
+    -- nnoremap <silent>[b :BufferLineCycleNext<CR>
+    -- nnoremap <silent>b] :BufferLineCyclePrev<CR>
