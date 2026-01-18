@@ -18,6 +18,7 @@ vim.filetype.add({
 })
 vim.opt.clipboard="unnamedplus"
 vim.opt.whichwrap="<,>,[,]"
+vim.opt.iskeyword:append({ "_", "-", ".", "/" })
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then

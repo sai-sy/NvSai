@@ -1,6 +1,5 @@
 # TODO
 - [x] arrow key navigation rolls across lines
-- [ ] shift tab indent
 - [ ] telescope no live preview
 - [ ] telescope hidden and git ignore files
     - [ ] telescope shows hidden and git ignore files but ignores node_modules/ and .git/
@@ -17,7 +16,7 @@
 - [ ] markdown render
 - [ ] nvim cheatsheet
 - [ ] block roll up and down
-- [ ] sticky block header
+- [x] sticky block header
 - [ ] open pdfs
 - [ ] I abandoned this because NvChad's cheatsheet was so nice but I can't get diagnostics on their custom nvui plugin tabufline so I'll do it on this and use https://github.com/sudormrfbin/cheatsheet.nvim
 - [ ] jump to last spot and forward spot with alt arrow
@@ -25,3 +24,4 @@
 - [x] hover diagnostics (leader + d)
 - [x] hover code signatures (K)
 - [x] migrate over to new nvim 0.11 lsp management
+- [] shift tab indent (won't fix because we use this for tab navigation)
