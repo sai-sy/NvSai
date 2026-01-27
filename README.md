@@ -30,3 +30,5 @@
 - [x] hover code signatures (K)
 - [x] migrate over to new nvim 0.11 lsp management
 - [!] shift tab indent (won't fix because we use this for tab navigation)
+- [ ] when you gd to something with multiple defs you get a window to select which one you want to go to. make that window close on selection
+- [ ] need code or lsp hints when inside bracket for func params
