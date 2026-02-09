@@ -49,6 +49,27 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     opts.desc = "Restart LSP"
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+    local function show_hover_if_clear()
+      if vim.api.nvim_get_mode().mode ~= "i" then
+        return
+      end
+      if vim.fn.pumvisible() == 1 then
+        return
+      end
+      for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local cfg = vim.api.nvim_win_get_config(win)
+        if cfg.relative ~= "" then
+          return
+        end
+      end
+      vim.lsp.buf.hover({ focus = false })
+    end
+
+    vim.api.nvim_create_autocmd("CursorHoldI", {
+      buffer = ev.buf,
+      callback = show_hover_if_clear,
+    })
   end,
 })
 
@@ -67,4 +88,3 @@ vim.diagnostic.config({
   },
   virtual_text = true
 })
-

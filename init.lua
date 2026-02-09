@@ -18,7 +18,8 @@ vim.filetype.add({
 })
 vim.opt.clipboard="unnamedplus"
 vim.opt.whichwrap="<,>,[,]"
-vim.opt.iskeyword:append({ "_", "-", ".", "/" })
+vim.opt.iskeyword:append({ "_"})
+vim.opt.iskeyword:remove({ "-", ".", "/" })
 vim.opt.foldlevel=50
 vim.opt.foldmethod="expr"
 vim.opt.foldexpr="v:lua.vim.treesitter.foldexpr()"
