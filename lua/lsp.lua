@@ -57,6 +57,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
       if vim.fn.pumvisible() == 1 then
         return
       end
+      local has_hover = false
+      for _, client in ipairs(vim.lsp.get_clients({ bufnr = ev.buf })) do
+        if client.supports_method("textDocument/hover") then
+          has_hover = true
+          break
+        end
+      end
+      if not has_hover then
+        return
+      end
       for _, win in ipairs(vim.api.nvim_list_wins()) do
         local cfg = vim.api.nvim_win_get_config(win)
         if cfg.relative ~= "" then
