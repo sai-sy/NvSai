@@ -59,5 +59,6 @@ vim.api.nvim_create_autocmd("CursorHoldI", {
 ```
 - [ ] remove text LSP from code or make it lower priority then the regular LSP
 - [ ] gd should jump me with the line in the middle of the screen or all/any jumps should make that the middle of the screen
+- [ ] jump to the corresponding bracket e.g if i'm at the bottom of a function I can jump to the top by being on the bracket
     - unless its already within the viewport?
 - [ ] JSON lsp and formatter and linter
